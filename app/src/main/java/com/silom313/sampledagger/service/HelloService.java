@@ -1,6 +1,6 @@
 package com.silom313.sampledagger.service;
 
-public class HelloWorldService {
+public class HelloService {
 
     public String sayHello(String name) {
         return "Hello " + name;

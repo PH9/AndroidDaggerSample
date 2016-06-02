@@ -1,13 +1,13 @@
 package com.silom313.sampledagger.configuration;
 
-import com.silom313.sampledagger.service.HelloWorldService;
+import com.silom313.sampledagger.service.HelloService;
 
 import dagger.Module;
 
 @Module
 public class MyApplicationModule {
 
-    HelloWorldService provideHelloWorldService() {
-        return new HelloWorldService();
+    HelloService provideHelloService() {
+        return new HelloService();
     }
 }
