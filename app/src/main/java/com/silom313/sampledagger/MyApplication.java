@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.silom313.sampledagger.configuration.DaggerMyApplicationComponent;
 import com.silom313.sampledagger.configuration.MyApplicationComponent;
+import com.silom313.sampledagger.service.HelloService;
 
 public class MyApplication extends Application {
 
@@ -14,5 +15,7 @@ public class MyApplication extends Application {
         super.onCreate();
 
         component = DaggerMyApplicationComponent.builder().build();
+
+        HelloService service = component.getHelloService();
     }
 }
