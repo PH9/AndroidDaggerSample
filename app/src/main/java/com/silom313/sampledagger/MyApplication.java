@@ -7,10 +7,12 @@ import com.silom313.sampledagger.configuration.MyApplicationComponent;
 
 public class MyApplication extends Application {
 
+    MyApplicationComponent myApplicationComponent;
+
     @Override
     public void onCreate() {
         super.onCreate();
 
-        MyApplicationComponent myApplicationComponent = DaggerMyApplicationComponent.builder().build();
+        myApplicationComponent = DaggerMyApplicationComponent.builder().build();
     }
 }
