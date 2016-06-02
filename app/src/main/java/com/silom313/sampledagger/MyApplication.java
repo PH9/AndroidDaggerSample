@@ -1,6 +1,7 @@
 package com.silom313.sampledagger;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.silom313.sampledagger.configuration.DaggerMyApplicationComponent;
 import com.silom313.sampledagger.configuration.MyApplicationComponent;
@@ -17,5 +18,6 @@ public class MyApplication extends Application {
         component = DaggerMyApplicationComponent.builder().build();
 
         HelloService service = component.getHelloService();
+        Log.d("Hello Service",  service.sayHello("BaiPhai"));
     }
 }
